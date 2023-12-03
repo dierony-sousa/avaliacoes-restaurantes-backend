@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mysql-container:
+    image: mysql:8.0.33
+    environment:
+      MYSQL_ROOT_PASSWORD: 234589
+      MYSQL_DATABASE: avaliacoes_restaurantes
+    ports:
+      - "3307:3306"
+  spring-boot-app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql-container
