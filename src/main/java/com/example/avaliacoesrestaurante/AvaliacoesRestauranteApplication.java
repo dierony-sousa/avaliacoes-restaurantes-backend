@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AvaliacoesRestauranteApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("h2.server.web-allow-others", "true");
 		SpringApplication.run(AvaliacoesRestauranteApplication.class, args);
 	}
 
